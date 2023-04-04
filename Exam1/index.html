@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
         <title>欢迎访问</title>
     </head>
     <body>
@@ -77,20 +78,20 @@
         <button onclick="myFunction()">点击这里计算方程的根</button>
 	<script>
 	function myFunction() {
-		var a = prompt("请输入 a 的值：");
-		var b = prompt("请输入 b 的值：");
-		var c = prompt("请输入 c 的值：");
-		var delta = b * b - 4 * a * c;
-		if (delta < 0) {
-		    document.write("方程无实数根！");
-		} else if (delta == 0) {
-		    var x = -b / (2 * a);
-		    document.write("方程有一个实数根：" + x);
-		} else {
-		    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
-		    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
-		    document.write("方程有两个实数根：" + x1 + " 和 " + x2);
-		}
+        var a = prompt("请输入 a 的值：");
+        var b = prompt("请输入 b 的值：");
+        var c = prompt("请输入 c 的值：");
+        var delta = b * b - 4 * a * c;
+        if (delta < 0) {
+            document.write("方程无实数根！");
+        } else if (delta == 0) {
+            var x = -b / (2 * a);
+            document.write("方程有一个实数根：" + x);
+        } else {
+            var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.write("方程有两个实数根：" + x1 + " 和 " + x2);
+        }
 	}
 	</script>
     </body>
