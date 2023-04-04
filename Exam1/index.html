@@ -73,5 +73,18 @@
         </tbody>
         <p>友情链接：<a href="https://www.njupt.edu.cn">南京邮电大学</a></p>
         <p>感谢<a href="https://azure.microsoft.com">Microsoft Azure</a>的支持</p>
+	<button onclick="myFunction()">点击这里计算方程的根</button>
+	<script>
+	function myFunction() {
+  		var txt;
+  		var person = prompt("请输入你的名字:", "Harry Potter");
+  		if (person == null || person == "") {
+ 		   txt = "用户取消输入";
+ 		} else {
+ 		   txt = "你好，" + person + "!";
+ 		}
+  		document.getElementById("demo").innerHTML = txt;
+	}
+	</script>
     </body>
 </html>
