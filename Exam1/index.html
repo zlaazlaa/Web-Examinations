@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-	<meta charset="utf-8">
         <title>欢迎访问</title>
     </head>
     <body>
@@ -25,7 +24,8 @@
         <p></p>
         <hr>
         <h2>6门课程成绩</h2>
-        <thead>
+        <table border="1">
+            <thead>
 			<tr>
 				<th>课程名</th>
 				<th>开课学期</th>
@@ -71,19 +71,26 @@
 				<td>88</td>
 			</tr>
         </tbody>
+        </table>
         <p>友情链接：<a href="https://www.njupt.edu.cn">南京邮电大学</a></p>
         <p>感谢<a href="https://azure.microsoft.com">Microsoft Azure</a>的支持</p>
-	<button onclick="myFunction()">点击这里计算方程的根</button>
+        <button onclick="myFunction()">点击这里计算方程的根</button>
 	<script>
 	function myFunction() {
-  		var txt;
-  		var person = prompt("请输入你的名字:", "Harry Potter");
-  		if (person == null || person == "") {
- 		   txt = "用户取消输入";
- 		} else {
- 		   txt = "你好，" + person + "!";
- 		}
-  		document.getElementById("demo").innerHTML = txt;
+		var a = prompt("请输入 a 的值：");
+		var b = prompt("请输入 b 的值：");
+		var c = prompt("请输入 c 的值：");
+		var delta = b * b - 4 * a * c;
+		if (delta < 0) {
+		    document.write("方程无实数根！");
+		} else if (delta == 0) {
+		    var x = -b / (2 * a);
+		    document.write("方程有一个实数根：" + x);
+		} else {
+		    var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+		    var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+		    document.write("方程有两个实数根：" + x1 + " 和 " + x2);
+		}
 	}
 	</script>
     </body>
