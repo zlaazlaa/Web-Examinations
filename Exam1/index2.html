@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>欢迎访问</title>
+    </head>
+    <body>
+        <hr>
+        <h2>个人简历</h2>
+        <ol>
+            <li>南京邮电大学 软件工程（嵌入式培养）专业</li>
+            <li>B20090611</li>
+            <li>马青宇</li>
+        </ol>
+        <hr>
+        <h2>最喜欢的4本书</h2>
+        <ul>
+            <li>红楼梦</li>
+            <li>水浒传</li>
+            <li>三国演义</li>
+            <li>西游记</li>
+        </ul>
+        <hr>
+        <h2>个人兴趣简介</h2>
+        <p></p>
+        <hr>
+        <h2>6门课程成绩</h2>
+        <table border="1">
+            <thead>
+			<tr>
+				<th>课程名</th>
+				<th>开课学期</th>
+				<th>任课教师</th>
+				<th>分数</th>
+			</tr>
+		</thead>
+        <tbody>
+			<tr>
+				<td>高等数学</td>
+				<td>2012秋季</td>
+				<td>张三</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td>离散数学</td>
+				<td>2012春季</td>
+				<td>李四</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td>计算机组成原理</td>
+				<td>2013秋季</td>
+				<td>王五</td>
+				<td>95</td>
+			</tr>
+			<tr>
+				<td>算法设计与分析</td>
+				<td>2014春季</td>
+				<td>赵六</td>
+				<td>85</td>
+			</tr>
+			<tr>
+				<td>操作系统</td>
+				<td>2014秋季</td>
+				<td>孙七</td>
+				<td>92</td>
+			</tr>
+			<tr>
+				<td>数据库系统原理</td>
+				<td>2015春季</td>
+				<td>周八</td>
+				<td>88</td>
+			</tr>
+        </tbody>
+        </table>
+        <p>友情链接：<a href="https://www.njupt.edu.cn">南京邮电大学</a></p>
+        <p>感谢<a href="https://azure.microsoft.com">Microsoft Azure</a>的支持</p>
+        <button onclick="myFunction()">点击这里计算方程的根</button>
+	<script>
+	function myFunction() {
+        var a = prompt("请输入 a 的值：");
+        var b = prompt("请输入 b 的值：");
+        var c = prompt("请输入 c 的值：");
+        var delta = b * b - 4 * a * c;
+        if (delta < 0) {
+            document.write("方程无实数根！");
+        } else if (delta == 0) {
+            var x = -b / (2 * a);
+            document.write("方程有一个实数根：" + x);
+        } else {
+            var x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            var x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.write("方程有两个实数根：" + x1 + " 和 " + x2);
+        }
+	}
+	</script>
+    </body>
+</html>
